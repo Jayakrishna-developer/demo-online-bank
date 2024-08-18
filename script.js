@@ -96,7 +96,7 @@ function deposit() {
      const resultDiv = document.getElementById("deposit_result");
     resultDiv.innerHTML = `YOUR CURRENT BALANCE IS ${current_balance.balance}`;
       resultDiv.classList.add("fade-in");
-    alert("your amount added suceesfully");
+    alert("your amount added successfully");
   }
 }
 
@@ -132,7 +132,7 @@ current_balance=JSON.parse(localStorage.getItem(login_acno));
     resultDiv.innerHTML = `YOUR CURRENT BALANCE IS ${current_balance.balance}`;
       resultDiv.classList.add("fade-in");
       
-    alert("your amount withdrawed suceesfully");
+    alert("your amount withdrawed successfully");
     alert(`after withdrawal balance :${current_balance.balance}`)
   }
 
@@ -141,4 +141,3 @@ current_balance=JSON.parse(localStorage.getItem(login_acno));
    window.location = "./index.html";
  }
 
- 
