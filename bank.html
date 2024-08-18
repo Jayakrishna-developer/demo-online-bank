@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+            <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+            rel="stylesheet"
+            />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+                integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <style>
+                footer{
+                    margin-top: 200px;
+                    
+                }
+                body{
+                    background-image: url(./images/1.png);
+                    background-size: cover;
+                    background-repeat: no-repeat ;
+                    height: 750px;
+                }
+             h1{
+                text-align: center;
+                color:rgb(3, 49, 55);
+                font-weight: 800;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-shadow: 1px 1px 1px black;
+             }
+             #head1{
+              
+                color:rgb(13, 90, 97);
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              
+           
+        
+             }
+
+
+              .register-container {
+            background-color: antiquewhite;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid antiquewhite;
+            box-shadow: 0 0px 5px black;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .register-container img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .register-container input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 12px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .register-container button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+        }
+            
+         .withdraw-container {
+            background-color: antiquewhite;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid antiquewhite;
+            box-shadow: 0 0px 5px black;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            
+        }
+
+        .withdraw-container img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .withdraw-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .withdraw-container input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .withdraw-container input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        .withdraw-container button {
+            width: 100%;
+            padding: 12px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .withdraw-container button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+        }
+        @media screen and (min-width:850px) and (max-width:1590px){
+            .register-container {
+                margin-left: 150px;
+            }
+            .withdraw-container {
+                margin-left: -150px;
+            }
+        }
+           @media screen and (min-width:750px) and (max-width:848px){
+            .register-container {
+                margin-left: 50px;
+            }
+            .withdraw-container {
+                margin-left: -50px;
+            }
+        }
+        @media screen and (min-width:130px) and (max-width:350px) {
+            .register-container #deposit{
+
+                font-size: 4.5vw;
+            }
+             .register-container #deposit_acno{
+
+                font-size: 4.5vw;
+            }
+             .withdraw-container #withdraw{
+
+                font-size: 4.5vw;
+            }
+             .withdraw-container #withdraw_acno{
+
+                font-size: 4.5vw;
+            }
+        }
+           @media screen and (min-width:200px) and (max-width:459px){
+             h1{
+            font-size: 3vw;
+           }
+           }
+
+         @media screen and (min-width:530px) and (max-width:575px) {
+           .withdraw-container{
+            margin-left: 60px ;
+           }
+           .register-container{
+            margin-left: 60px ;
+           }
+            h1{
+            font-size: 4vw;
+           }
+         }
+         @media screen and (min-width:460px) and (max-width:529px) {
+           .withdraw-container{
+            margin-left: 30px ;
+           }
+           .register-container{
+            margin-left: 30px ;
+           }
+           h1{
+            font-size: 4vw;
+           }
+        }
+           @media screen and (min-width:440px) and (max-width:450px) {
+           .withdraw-container{
+            margin-left: 10px ;
+           }
+           .register-container{
+            margin-left: 10px ;
+           }
+            h1{
+            font-size: 4vw;
+           }
+         }
+         @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+  opacity: 1;
+}
+
+h3{
+    color: brown;
+    font-weight: 700;
+}
+            </style>
+</head>
+<body>
+<!-- Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid justify-content-between">
+        <!-- Left elements -->
+        <div class="d-flex">
+            <!-- Brand -->
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+              
+            </div>
+
+           
+        </div>
+        <!-- Left elements -->
+
+        <!-- Center elements -->
+        <ul class="navbar-nav navbar-expand-lg  ">
+            <li><h1>ONLINE BANKING SERVICE</h1></li>
+        </ul>
+        <!-- Center elements -->
+
+        <!-- Right elements -->
+        <ul class="navbar-nav flex-row">
+           
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="#">
+                    <button style="border: none;background-color: transparent; color: white;" onclick="logout()">logout</button></span>
+                </a>
+            </li>
+            
+                
+            
+            
+        <!-- Right elements -->
+    </div>
+</nav>
+<!-- Navbar -->
+    <div class="container-fluid" id="c">
+
+    <h3 id="head1"></h3>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+            <div class="register-container  mt-5">
+                <h3>DEPOSIT</h3>
+            <input type="text" id="deposit" name="deposit" placeholder="ENTER YOUR AMOUNT" required>
+        <input type="text" id="deposit_acno" name="deposit_acno" placeholder="ENTER YOUR ACCOUNT NUMBER" required>
+        <button type="button" onclick="deposit()" >DEPOSIT</button>
+        <div id="deposit_result" class="result"></div>
+            </div>
+    </div>
+        <div class="col-lg-3 col-md-2 col-sm-1 "></div>
+        <div class="col-lg-3 col-md-2 col-sm-1 "></div>
+        <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+            <div class="withdraw-container  mt-5">
+                <h3>WITHDRAW</h3>
+            <input type="text" id="withdraw" name="withdraw" placeholder="ENTER YOUR AMOUNT" required>
+        <input type="text" id="withdraw_acno" name="withdraw_acno" placeholder="ENTER YOUR ACCOUNT NUMBER" required>
+        <button type="button" onclick="withdraw()">WITHDRAW</button>
+    <div id="withdraw_result" class="result">
+      <div class="audio" id="audio"></div>
+        
+     
+    </div>
+    </div>
+    </div>
+    </div>
+    
+</div>
+<footer class=" bg-info text-center">
+    <!-- Grid container -->
+    <div class="container-fluid p-4 pb-0">
+        <!-- Section: Form -->
+        <section class="">
+            <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                    <!--Grid column-->
+                    <div class="col-auto">
+                        <p class="pt-2 text-light">
+                            <strong>Sign up for our newsletter</strong>
+                        </p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-5 col-12">
+                        <!-- Email input -->
+                        <div data-mdb-input-init class="form-outline mb-4 bg-light">
+                            <input type="email" id="form5Example26" class="form-control" />
+                            <label class="form-label" for="form5Example26">Email address</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-auto">
+                        <!-- Submit button -->
+                        <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                            Subscribe
+                        </button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </form>
+        </section>
+        <!-- Section: Form -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-light"h>jayakrishnabank.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<script src="./script.js">
+
+       
+       
+</script>
+</body>
+</html>

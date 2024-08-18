@@ -1,0 +1,98 @@
+.container .row{
+  justify-content: center;
+}
+body{
+  overflow-x: hidden;
+   
+}
+.responsive-text{
+  font-size: 1.3vw;
+  text-align:justify;
+  
+}
+#head1{
+  margin-top: 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  color:brown;
+  
+}
+#head2 {
+  margin-top: 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: brown;
+
+}
+responsive-text2{
+  font-size: 1.3vw;
+  text-align: justify;
+}
+.container-fluid .btn{
+  border: 2px solid brown;
+}
+@media only screen and  (min-width: 320px) and (max-width: 740px) {
+  #img1{
+    margin-top: 100px;
+  
+  }
+  .responsive-text{
+    font-size: 2vw;
+  }
+     .responsive-text2 {
+       font-size: 2vw;
+     }
+  #head1{
+    font-size: 5vw;
+    
+  }
+    #img-2 {
+      margin-top: 130px;
+    }
+  #head2{
+    font-size: 3vw;
+  }
+     .container-fluid .btn {
+       font-size: 2vw;
+       padding-left: 1.5vw;
+       padding-right: 1.5vw;
+     }
+}
+@media only screen and (min-width: 122px) and (max-width: 319px) {
+  #img1 {
+    margin-top: 200px;
+  
+
+  }
+
+  .responsive-text {
+    font-size: 3vw;
+  }
+        .responsive-text2 {
+          font-size: 3vw;
+        }
+ #head2 {
+   font-size: 3vw;
+ }
+  #head1 {
+    font-size: 5vw;
+  }
+  .container-fluid .btn{
+    font-size: 3vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+  }
+  
+}
+@media only screen and (min-width: 743px) and (max-width: 900px){
+#img-2{
+  margin-top: 100px;
+}
+#head2{
+  font-size: 3vw;
+}
+}
