@@ -85,6 +85,7 @@ function deposit() {
 
   if (document.getElementById("deposit_acno").value != login_acno) {
     alert("Invalid account number");
+    audio.innerHTML = `<audio src="./audio/Invalid account number.mp3" autoplay></audio>`;
   } else {
     let userdata = JSON.parse(localStorage.getItem(login_acno));
     userdata.balance = (userdata.balance || 0) + deposit_amount;
@@ -101,40 +102,50 @@ function deposit() {
 }
 
 
-function withdraw(){
+function withdraw() {
+
   let login_acno = JSON.parse(localStorage.getItem("loginacno"));
-  let withdraw_ammount = parseFloat(document.getElementById("withdraw").value); 
+  let withdraw_acno = document.getElementById("withdraw_acno").value;
+  let withdraw_ammount = parseFloat(document.getElementById("withdraw").value);
 
-  console.log(login_acno);
 
-  if (document.getElementById("withdraw_acno").value != login_acno) {
-    alert("Invalid account number");
-}
-
-else{
-  amount = document.getElementById("withdraw").value;
- let userdata= JSON.parse(localStorage.getItem(login_acno));
- if (amount > userdata.balance) {
-   audio.innerHTML = ` <audio src="./audio/Insufficient balance.mp3" autoplay></audio>`;
-   alert("insufficient balance");
-   return;
- } else if (amount < 0){
-  alert("enter a valid amount")
-  return
- }
-   alert(`bank balance before withdrawl:${userdata.balance}`);
-  alert(`withdrawal amount :${amount} `)
-  userdata.balance = (userdata.balance || 0) - withdraw_ammount;
-  localStorage.setItem(login_acno, JSON.stringify(userdata));
-}
-current_balance=JSON.parse(localStorage.getItem(login_acno));
-     const resultDiv = document.getElementById("withdraw_result");
-    resultDiv.innerHTML = `YOUR CURRENT BALANCE IS ${current_balance.balance}`;
-      resultDiv.classList.add("fade-in");
-      
-    alert("your amount withdrawed successfully");
-    alert(`after withdrawal balance :${current_balance.balance}`)
+  if (!withdraw_acno || !withdraw_ammount) {
+    alert("Please fill all fields.");
+    return;
   }
+
+  
+  if (document.getElementById("withdraw_acno").value != login_acno) {
+    alert("Invalid account number.");
+    audio.innerHTML = `<audio src="./audio/Invalid account number.mp3" autoplay></audio>`;
+    return;
+  }
+
+  let userdata = JSON.parse(localStorage.getItem(login_acno));
+
+ 
+  if (withdraw_ammount > userdata.balance) {
+    audio.innerHTML = `<audio src="./audio/Insufficient balance.mp3" autoplay></audio>`;
+    alert("Insufficient balance.");
+    return;
+  } else if (withdraw_ammount <= 0) {
+    alert("Please enter a valid amount.");
+    return;
+  }
+
+  alert(`Bank balance before withdrawal: ${userdata.balance}`);
+  alert(`Withdrawal amount: ${withdraw_ammount}`);
+  userdata.balance = userdata.balance - withdraw_ammount;
+  localStorage.setItem(login_acno, JSON.stringify(userdata));
+
+  let current_balance = JSON.parse(localStorage.getItem(login_acno));
+  const resultDiv = document.getElementById("withdraw_result");
+  resultDiv.innerHTML = `YOUR CURRENT BALANCE IS ${current_balance.balance}`;
+  resultDiv.classList.add("fade-in");
+
+  alert("Your amount has been withdrawn successfully.");
+  alert(`After withdrawal balance: ${current_balance.balance}`);
+}
 
  function logout() {
    localStorage.clear();
