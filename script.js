@@ -47,6 +47,12 @@ function login() {
     accno: document.getElementById("log_account_number").value,
     password: document.getElementById("log_password").value,
   };
+
+ 
+  if (!logindata.accno || !logindata.password) {
+    alert("Please fill in all fields.");
+    return;
+  }
   key = logindata.accno;
   let reciveddata = JSON.parse(localStorage.getItem(key));
   if (!reciveddata) {
