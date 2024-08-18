@@ -12,20 +12,18 @@ function register() {
     userdata.password === ""
   ) {
     alert("Please fill all fields");
-  } else if (userdata.account_number in localStorage) {
-     audio.innerHTML = ` <audio src="./audio/Account Number already Registered.mp3 "autoplay></audio>`;
-    alert("ACCOUNT NUMBER ALREADY REGISTERED");
-   
-  }
-   else if (isUsernameInLocalStorage(userdata.username)) {
+  } else if (isUsernameInLocalStorage(userdata.username)) {
     audio.innerHTML = ` <audio src="./audio/User name already registered .mp3" autoplay></audio>`;
     alert("USERNAME ALREADY REGISTERED");
+  } else if (userdata.account_number in localStorage) {
+    audio.innerHTML = ` <audio src="./audio/Account Number already Registered.mp3 "autoplay></audio>`;
+    alert("ACCOUNT NUMBER ALREADY REGISTERED");
   } else {
     let suserdata = JSON.stringify(userdata);
     console.log(suserdata);
     localStorage.setItem(userdata.account_number, suserdata);
     console.log(userdata);
-    alert("registered successfully")
+    alert("registered successfully");
     window.location = "./login.html"; // Redirect to the login page
   }
 }
@@ -54,6 +52,7 @@ function login() {
   if (!reciveddata) {
     audio.innerHTML = `<audio src="./audio/Invalid account number.mp3" autoplay></audio>`;
     alert("invalid account number");
+    return;
   } else if (logindata.password !== reciveddata.password) {
     audio.innerHTML = ` <audio src="./audio/Invalid password .mp3" autoplay></audio>`;
     alert("invalid password");
